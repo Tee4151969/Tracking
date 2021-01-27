@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE3C4741-FAF4-412A-9C3C-61E6AFA2BA05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Datawarehouse_Job_Track.My.MyApplication</StartupObject>
+    <RootNamespace>Datawarehouse_Job_Track</RootNamespace>
+    <AssemblyName>Datawarehouse Job Track</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Pornc25\Desktop\Job Track\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>48</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Datawarehouse Job Track.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Datawarehouse Job Track.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_bug_49366.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2CDE839351FD03FC42626043B32824B08B578082</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Datawarehouse Job Track_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.WinControls, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Telerik.WinControls.RadDiagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Active_Directory.vb" />
+    <Compile Include="Authentication.designer.vb">
+      <DependentUpon>Authentication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cls_Random_Color.vb" />
+    <Compile Include="Code_Application.vb" />
+    <Compile Include="Config_Application.vb" />
+    <Compile Include="FRM_BALLOON.Designer.vb">
+      <DependentUpon>FRM_BALLOON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_BALLOON.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_LOOKUP.Designer.vb">
+      <DependentUpon>FRM_LOOKUP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_LOOKUP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MAIN.Designer.vb">
+      <DependentUpon>FRM_MAIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MAIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menu.Designer.vb">
+      <DependentUpon>frm_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_QUERY_PROPERTY.Designer.vb">
+      <DependentUpon>FRM_QUERY_PROPERTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_QUERY_PROPERTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ZOOM.Designer.vb">
+      <DependentUpon>FRM_ZOOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ZOOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SMSServices.vb" />
+    <Compile Include="User_Active.Designer.vb">
+      <DependentUpon>User_Active.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User_Active.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Update.Designer.vb">
+      <DependentUpon>User_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility.vb" />
+    <Compile Include="Web References\Public_Service\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication.resx">
+      <DependentUpon>Authentication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_BALLOON.resx">
+      <DependentUpon>FRM_BALLOON.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_LOOKUP.resx">
+      <DependentUpon>FRM_LOOKUP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menu.resx">
+      <DependentUpon>frm_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_QUERY_PROPERTY.resx">
+      <DependentUpon>FRM_QUERY_PROPERTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ZOOM.resx">
+      <DependentUpon>FRM_ZOOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Active.resx">
+      <DependentUpon>User_Active.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Update.resx">
+      <DependentUpon>User_Update.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Datawarehouse Job Track_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Public_Service\Class_Monitor_Log.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Public_Service\Class_User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Public_Service\CLS_Config_Connection_String.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Public_Service\CLS_Config_Query.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Public_Service\Public.wsdl" />
+    <None Include="Web References\Public_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.22.203.70/Utility_Service/Public.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Public_Service\</RelPath>
+      <UpdateFromURL>http://172.22.203.70/Utility_Service/Public.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Datawarehouse_Job_Track_Public_Service__Public</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Public_Service\Public.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icon\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_f-bug_256_282466.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_bug_49366.ico" />
+    <None Include="Resources\Cursor_3.png" />
+    <None Include="Resources\Cursor_2.png" />
+    <None Include="Resources\Cursor_1.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\0.png" />
+    <None Include="Resources\Shake.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\Status.png" />
+    <None Include="Resources\if_advantage_speed_1034366.png" />
+    <None Include="Resources\Timer.png" />
+    <None Include="Resources\NoNotify.png" />
+    <None Include="Resources\Notify.png" />
+    <None Include="Resources\maximize_03.png" />
+    <None Include="Resources\Minimize_Red.png" />
+    <None Include="Resources\if_Minimize Square_53007.png" />
+    <None Include="Resources\Close_U.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Close_Red.png" />
+    <None Include="Resources\Minimize_U.png" />
+    <None Include="Resources\Maximize_U.png" />
+    <None Include="Resources\Minimize_02.png" />
+    <None Include="Resources\Minimize_01.png" />
+    <None Include="Resources\Maximize_02.png" />
+    <None Include="Resources\Maximize_01.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\1496835913_cross.png" />
+    <None Include="Resources\search %282%29.png" />
+    <None Include="Resources\1496835851_icons_add.png" />
+    <None Include="Resources\1496835842_plus-24.png" />
+    <None Include="Resources\1496839754_minus-square.png" />
+    <None Include="Resources\if_login_54230.png" />
+    <None Include="Resources\if_setting_tools_64639.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="if_bug_49366.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Oracle.DataAccess">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="TelerikCommon">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

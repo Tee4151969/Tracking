@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DWH_Write_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inLOGIN_GUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inAPPLICATION_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inUserDB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inFRECH_SEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inQUERY_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inQUERY_SQL_TEXT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Write_LogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Write_LogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_Query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inLOGIN_GUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inAPPLICATION_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inFRECH_SEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inQUERY_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="inRowQTY" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_QueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Update_Log_QueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_Application_Start">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inLOGIN_GUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inAPPLICATION_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inFRECH_SEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inQUERY_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_Application_StartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Update_Log_Application_StartResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_Application_End">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inLOGIN_GUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inAPPLICATION_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inFRECH_SEQ_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inQUERY_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Update_Log_Application_EndResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Update_Log_Application_EndResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GET_SYS_GUID">
+        <s:complexType />
+      </s:element>
+      <s:element name="GET_SYS_GUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GET_SYS_GUIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_ConnectionString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_ConnectionStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Config_ConnectionStringResult" type="tns:CLS_Config_Connection_String" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CLS_Config_Connection_String">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Connect_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connect_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connect_Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connect_String" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connect_Find_Character" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connect_Replace_Character" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DWH_Config_Application">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inComputerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iniPaddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_ApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Config_ApplicationResult" type="tns:Class_User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Class_User">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="obj_Application" type="tns:ArrayOfClass_Application" />
+          <s:element minOccurs="1" maxOccurs="1" name="type_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Login_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Full_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Computername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ipaddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Application">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Application" nillable="true" type="tns:Class_Application" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Application">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Application_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Return_Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Application_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Application_Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Read_Frecth" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Frecth_Type" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="output_csv" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="output_excel" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="output_word" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="output_pdf" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="output_html" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="obj_Group_Query" type="tns:ArrayOfClass_Application_Group_Query" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Application_Group_Query">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Application_Group_Query" nillable="true" type="tns:Class_Application_Group_Query" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Application_Group_Query">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SQL_Query_Group_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SQL_Query" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connection_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connection_String" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connection_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connection_Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Obj_Column" type="tns:ArrayOfClass_Application_Column" />
+          <s:element minOccurs="0" maxOccurs="1" name="Obj_Column_Parameter" type="tns:ArrayOfClass_Application_Column_Parameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Application_Column">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Application_Column" nillable="true" type="tns:Class_Application_Column" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Application_Column">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ColumnSeq" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColumnName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColumnIdx" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ColumnPosition" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Application_Column_Parameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Application_Column_Parameter" nillable="true" type="tns:Class_Application_Column_Parameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Application_Column_Parameter">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Parameter_Required" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Group_QueryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parameter_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Format" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Size" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_Value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parameter_Sort" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parameter_List" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DWH_Config_Application_Query_Set">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sLoginName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iApplicationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sColumnKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sQueryKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_Application_Query_SetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DWH_Config_Application_Query_SetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_Application_Query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iApplicationID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Config_Application_QueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Config_Application_QueryResult" type="tns:ArrayOfCLS_Config_Query" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCLS_Config_Query">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CLS_Config_Query" nillable="true" type="tns:CLS_Config_Query" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CLS_Config_Query">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Query_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="QUery_Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DWH_Monitor_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DWH_Monitor_LogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DWH_Monitor_LogResult" type="tns:ArrayOfClass_Monitor_Log" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClass_Monitor_Log">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Monitor_Log" nillable="true" type="tns:Class_Monitor_Log" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Monitor_Log">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LIST_APPLICATION" type="tns:ArrayOfClass_Monitor_Application" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOGINNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COMPUTER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOGON" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOGOFF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GROUP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Monitor_Application">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Monitor_Application" nillable="true" type="tns:Class_Monitor_Application" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Monitor_Application">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="List_SQL" type="tns:ArrayOfClass_Monitor_Application_Query" />
+          <s:element minOccurs="0" maxOccurs="1" name="Application_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Application_Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Application_QTY" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClass_Monitor_Application_Query">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Class_Monitor_Application_Query" nillable="true" type="tns:Class_Monitor_Application_Query" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Class_Monitor_Application_Query">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SEQ_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="QUERY_SQL_TEXT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USER_DB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONNECTION_NAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ROW_QTY" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectDataToDatatable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inConnect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataToDatatableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDataToDatatableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataToDatatableTNS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTNSName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataToDatatableTNSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDataToDatatableTNSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inConnect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataTNS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTNSName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataTNSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDataTNSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDataWithFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inConnect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inParam" type="tns:ArrayOfParamOracle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfParamOracle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParamOracle" nillable="true" type="tns:ParamOracle" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParamOracle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:OracleDbType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OracleDbType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BFile" />
+          <s:enumeration value="Blob" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Char" />
+          <s:enumeration value="Clob" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Long" />
+          <s:enumeration value="LongRaw" />
+          <s:enumeration value="Int16" />
+          <s:enumeration value="Int32" />
+          <s:enumeration value="Int64" />
+          <s:enumeration value="IntervalDS" />
+          <s:enumeration value="IntervalYM" />
+          <s:enumeration value="NClob" />
+          <s:enumeration value="NChar" />
+          <s:enumeration value="NVarchar2" />
+          <s:enumeration value="Raw" />
+          <s:enumeration value="RefCursor" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="TimeStamp" />
+          <s:enumeration value="TimeStampLTZ" />
+          <s:enumeration value="TimeStampTZ" />
+          <s:enumeration value="Varchar2" />
+          <s:enumeration value="XmlType" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ExecuteDataWithFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteDataWithFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inConnect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Execute_Procedure_Opex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inConnect" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IN_WEEK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IN_OPEX_CONTROL_SEQ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Execute_Procedure_OpexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Execute_Procedure_OpexResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DWH_Write_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Write_Log" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Write_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Write_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_QuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_Query" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_QuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_Application_StartSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_Application_Start" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_Application_StartSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_Application_StartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_Application_EndSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_Application_End" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Update_Log_Application_EndSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Update_Log_Application_EndResponse" />
+  </wsdl:message>
+  <wsdl:message name="GET_SYS_GUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GET_SYS_GUID" />
+  </wsdl:message>
+  <wsdl:message name="GET_SYS_GUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GET_SYS_GUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_ConnectionStringSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Config_ConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_ConnectionStringSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Config_ConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_ApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Config_Application" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_ApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Config_ApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_Application_Query_SetSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Config_Application_Query_Set" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_Application_Query_SetSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Config_Application_Query_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_Application_QuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Config_Application_Query" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Config_Application_QuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Config_Application_QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Monitor_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:DWH_Monitor_Log" />
+  </wsdl:message>
+  <wsdl:message name="DWH_Monitor_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:DWH_Monitor_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataToDatatableSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDataToDatatable" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataToDatatableSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDataToDatatableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataToDatatableTNSSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDataToDatatableTNS" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataToDatatableTNSSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDataToDatatableTNSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectData" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataTNSSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDataTNS" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataTNSSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDataTNSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDataWithFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteDataWithFile" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDataWithFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteDataWithFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteData" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Execute_Procedure_OpexSoapIn">
+    <wsdl:part name="parameters" element="tns:Execute_Procedure_Opex" />
+  </wsdl:message>
+  <wsdl:message name="Execute_Procedure_OpexSoapOut">
+    <wsdl:part name="parameters" element="tns:Execute_Procedure_OpexResponse" />
+  </wsdl:message>
+  <wsdl:portType name="_PublicSoap">
+    <wsdl:operation name="DWH_Write_Log">
+      <wsdl:input message="tns:DWH_Write_LogSoapIn" />
+      <wsdl:output message="tns:DWH_Write_LogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Query">
+      <wsdl:input message="tns:DWH_Update_Log_QuerySoapIn" />
+      <wsdl:output message="tns:DWH_Update_Log_QuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_Start">
+      <wsdl:input message="tns:DWH_Update_Log_Application_StartSoapIn" />
+      <wsdl:output message="tns:DWH_Update_Log_Application_StartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_End">
+      <wsdl:input message="tns:DWH_Update_Log_Application_EndSoapIn" />
+      <wsdl:output message="tns:DWH_Update_Log_Application_EndSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_SYS_GUID">
+      <wsdl:input message="tns:GET_SYS_GUIDSoapIn" />
+      <wsdl:output message="tns:GET_SYS_GUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_ConnectionString">
+      <wsdl:input message="tns:DWH_Config_ConnectionStringSoapIn" />
+      <wsdl:output message="tns:DWH_Config_ConnectionStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application">
+      <wsdl:input message="tns:DWH_Config_ApplicationSoapIn" />
+      <wsdl:output message="tns:DWH_Config_ApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query_Set">
+      <wsdl:input message="tns:DWH_Config_Application_Query_SetSoapIn" />
+      <wsdl:output message="tns:DWH_Config_Application_Query_SetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query">
+      <wsdl:input message="tns:DWH_Config_Application_QuerySoapIn" />
+      <wsdl:output message="tns:DWH_Config_Application_QuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Monitor_Log">
+      <wsdl:input message="tns:DWH_Monitor_LogSoapIn" />
+      <wsdl:output message="tns:DWH_Monitor_LogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatable">
+      <wsdl:input message="tns:SelectDataToDatatableSoapIn" />
+      <wsdl:output message="tns:SelectDataToDatatableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatableTNS">
+      <wsdl:input message="tns:SelectDataToDatatableTNSSoapIn" />
+      <wsdl:output message="tns:SelectDataToDatatableTNSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectData">
+      <wsdl:input message="tns:SelectDataSoapIn" />
+      <wsdl:output message="tns:SelectDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataTNS">
+      <wsdl:input message="tns:SelectDataTNSSoapIn" />
+      <wsdl:output message="tns:SelectDataTNSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataWithFile">
+      <wsdl:input message="tns:ExecuteDataWithFileSoapIn" />
+      <wsdl:output message="tns:ExecuteDataWithFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteData">
+      <wsdl:input message="tns:ExecuteDataSoapIn" />
+      <wsdl:output message="tns:ExecuteDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Execute_Procedure_Opex">
+      <wsdl:input message="tns:Execute_Procedure_OpexSoapIn" />
+      <wsdl:output message="tns:Execute_Procedure_OpexSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="_PublicSoap" type="tns:_PublicSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DWH_Write_Log">
+      <soap:operation soapAction="http://tempuri.org/DWH_Write_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Query">
+      <soap:operation soapAction="http://tempuri.org/DWH_Update_Log_Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_Start">
+      <soap:operation soapAction="http://tempuri.org/DWH_Update_Log_Application_Start" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_End">
+      <soap:operation soapAction="http://tempuri.org/DWH_Update_Log_Application_End" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SYS_GUID">
+      <soap:operation soapAction="http://tempuri.org/GET_SYS_GUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_ConnectionString">
+      <soap:operation soapAction="http://tempuri.org/DWH_Config_ConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application">
+      <soap:operation soapAction="http://tempuri.org/DWH_Config_Application" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query_Set">
+      <soap:operation soapAction="http://tempuri.org/DWH_Config_Application_Query_Set" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query">
+      <soap:operation soapAction="http://tempuri.org/DWH_Config_Application_Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Monitor_Log">
+      <soap:operation soapAction="http://tempuri.org/DWH_Monitor_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatable">
+      <soap:operation soapAction="http://tempuri.org/SelectDataToDatatable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatableTNS">
+      <soap:operation soapAction="http://tempuri.org/SelectDataToDatatableTNS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectData">
+      <soap:operation soapAction="http://tempuri.org/SelectData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataTNS">
+      <soap:operation soapAction="http://tempuri.org/SelectDataTNS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataWithFile">
+      <soap:operation soapAction="http://tempuri.org/ExecuteDataWithFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteData">
+      <soap:operation soapAction="http://tempuri.org/ExecuteData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Execute_Procedure_Opex">
+      <soap:operation soapAction="http://tempuri.org/Execute_Procedure_Opex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="_PublicSoap12" type="tns:_PublicSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DWH_Write_Log">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Write_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Query">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Update_Log_Query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_Start">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Update_Log_Application_Start" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Update_Log_Application_End">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Update_Log_Application_End" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SYS_GUID">
+      <soap12:operation soapAction="http://tempuri.org/GET_SYS_GUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_ConnectionString">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Config_ConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Config_Application" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query_Set">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Config_Application_Query_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Config_Application_Query">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Config_Application_Query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DWH_Monitor_Log">
+      <soap12:operation soapAction="http://tempuri.org/DWH_Monitor_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatable">
+      <soap12:operation soapAction="http://tempuri.org/SelectDataToDatatable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataToDatatableTNS">
+      <soap12:operation soapAction="http://tempuri.org/SelectDataToDatatableTNS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectData">
+      <soap12:operation soapAction="http://tempuri.org/SelectData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataTNS">
+      <soap12:operation soapAction="http://tempuri.org/SelectDataTNS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataWithFile">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteDataWithFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteData">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Execute_Procedure_Opex">
+      <soap12:operation soapAction="http://tempuri.org/Execute_Procedure_Opex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="_Public">
+    <wsdl:port name="_PublicSoap" binding="tns:_PublicSoap">
+      <soap:address location="http://172.22.203.70/Utility_Service/Public.asmx" />
+    </wsdl:port>
+    <wsdl:port name="_PublicSoap12" binding="tns:_PublicSoap12">
+      <soap12:address location="http://172.22.203.70/Utility_Service/Public.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
